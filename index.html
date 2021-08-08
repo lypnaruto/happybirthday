@@ -18,7 +18,7 @@
         </style>
 </head>
     <body>
-      <audio style="display:none" autopaly loop>
+      <audio style="display:none" autoplay loop>
           <source src="love.mp3" type="audio/mpeg" >
       </audio>  
         <div id="main">
@@ -31,7 +31,7 @@
 <span class="say">一直陪伴在你的身边，</span><br><br>
 <span class="say">愿你被时光温暖相待，</span><br><br>
 <span class="say">愿你时时刻刻有快乐相伴，</span><br><br>
-<span class="say">希望以后的每年都能陪你点燃生日的蜡烛。</span><br><br>
+<span class="say">希望以后的每年都能陪你点燃生日的蜡烛！</span><br><br>
 <span class="say"><span class="space"></span> -- 李永鹏--</span><br>
 <span class="say"><h1>祝你生日快乐!</h1></span><br>
         </font>
@@ -126,30 +126,30 @@
         var seedAnimate = eval(Jscex.compile("async", function () {
             seed.draw();
             while (hold) {
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(5));
             }
             while (seed.canScale()) {
                 seed.scale(0.95);
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(5));
             }
             while (seed.canMove()) {
                 seed.move(0, 2);
                 foot.draw();
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(5));
             }
         }));
 
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
               tree.grow();
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(5));
             } while (tree.canGrow());
         }));
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
               tree.flower(2);
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(5));
             } while (tree.canFlower());
         }));
 
@@ -157,7 +157,7 @@
             tree.snapshot("p1", 240, 0, 610, 680);
             while (tree.move("p1", 500, 0)) {
                 foot.draw();
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(5));
             }
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
